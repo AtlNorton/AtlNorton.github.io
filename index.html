@@ -1,46 +1,131 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-      <style>
-        .text {
-          font-family: Arial, Helvetica, sans-serif
-        }
-
-        img {
-  max-width: 35%;
-  height: auto;
-}
+        <title>Austin's Website</title>
+        <style>
+          body {
+              background: #9BB2CC ;
+              color: rgb(45, 45, 45);
+              padding: 10px;
+              font-family: arial;
+              background-image: url("paper.gif");
+          }
+          #all-contents {
+              max-width: 800px;
+              margin: auto;
+          }
+      
+          /* navigation menu */
+          nav {
+              background: #7083b8;
+              margin-left: 100px;
+              margin-right:100px;
+              margin-top:40px;
+              margin-bottom:1px;
+              display: flex;
+              padding: 10px;
+              border: 2px solid #2c66ac;
+              border-radius: 25px;
+          }
+          h1 {
+              display: flex;
+              align-items: center;
+              color: white;
+              flex: 1;
+              margin: 0;
+          }
+          #nav-ul {
+              list-style-image: none;
+          }
+          .nav-li {
+              display: inline-block;
+              padding: 0 10px;
+              margin-left:10px;
+          }
+          a {
+              text-decoration: none;
+              color: #fff;
+          }
+      
+          /* main container area beneath menu */
+          main {
+            margin-left: 100px;
+              margin-right:100px;
+              background: #CAD9EB;
+              display: flex;
+              border: 2px solid #3e8cec;
+              border-radius: 25px;
+          }
+          .sidebar {
+              margin-right: 25px;
+              padding: 10px;
+          }
+          .sidebar-img {
+              width: 200px;
+          }
+          .content {
+              flex: 1;
+              padding: 15px;
+          }
+          #interests {
+              padding: 8px;
+              margin-left:10px;
+              
+            
+          }
+          h2, h3 {
+              margin: 0px;
+          }
+          img{
+            width:200px;
+            height:200px;
+            border: 1px solid #9BB2CC;
+            border-radius: 4px;
+            border-radius: 25px;
+            Margin-left:2px;
+            Margin-top:2px;
+            Margin-bottom:2px;
+          }
       </style>
     </head>
     
     <body>
-      <!-- All content goes here -->
-      <div> 
-          <nav>
-  
-          </nav>
-  
-          <main>
-            <!-- Sidebar section -->
-            <div>
-              <img src="https://climbhangar18.com/wp-content/uploads/2020/06/08.jpg">
-            </div>
-        
-            <!-- Content section -->
-            <div>
-              <h1 class="text">Austin's Website</h1>
-              
-              <h3 class="text">Junior at Chalmette High</h3>
-              <!-- Interests section --> 
-              <h3 class="text">Interests</h3>
-                <ul >
-                  <li class="text">Video games</li>
-                  <li class="text">Science</li>
-                  <li class="text">Rock Climbing</li>
-                </ul>
-               
-            </div>
-            
-          </main>
-      </div>
-  </body>
+         <!-- YOUR HTML TAGS GO HERE  -->
+             <!-- All content goes here -->
+    <div> 
+      <nav id="nav-ul">
+        <h1>Austin's Website</h1>
+        <ul>
+            <li>
+              <a href="index.html"> Home </a>
+            </li>
+            <li>
+              <a href="portfolio.html"> Portfolio </a>
+            </li>
+        </ul>
+
+      </nav>
+
+      <main>
+        <!-- Sidebar section -->
+        <div>
+
+        </div>
+    
+        <!-- Content section -->
+        <img src="https://www.outsideonline.com/sites/default/files/styles/img_600x600/public/2020/05/01/woman-bouldering-psychotherapy_s.jpg?itok=VfJ6LiZZ">
+
+<!-- Interests section -->
+<div id="interests">
+  <p>Junior at Chalmette Highschool</p>
+  <h3>Interests</h3>
+  <ul class="nav-li">
+      <li>-Climbing</li>
+      <li>-Science</li>
+      <li>-Video games</li>
+  </ul>
+</div>
+    </main>
+  </div>
+    </body>
+</html>
