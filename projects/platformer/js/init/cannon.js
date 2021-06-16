@@ -29,8 +29,10 @@
         // example: 
         cannon.create("top",800, 5000);
         cannon.create("top",490, 5000);
+        cannon.create("top",650, 5000);
         cannon.create("top",300, 5000);
-        cannon.create("bottom",300, 5000);
+        cannon.create("bottom",300,5000);
+        cannon.create("right",320,5000);
 
 
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
