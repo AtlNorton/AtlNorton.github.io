@@ -13,10 +13,11 @@
 			text-align: center;
 			display: block;
 			position: absolute;
-			top: 100px;
+			top: 400px;
 			left: 0px;  /* <--- Change me! */
 		}
 		.board{
+			background-image:url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/05ae7fdf-1ed9-4261-ab43-8ae6a2e1d02a/degfmru-3f2bf044-f2d1-436a-a194-19b4378f3be8.png/v1/fill/w_960,h_540,strp/space_background_by_norma2d_degfmru-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01NDAiLCJwYXRoIjoiXC9mXC8wNWFlN2ZkZi0xZWQ5LTQyNjEtYWI0My04YWU2YTJlMWQwMmFcL2RlZ2ZtcnUtM2YyYmYwNDQtZjJkMS00MzZhLWExOTQtMTliNDM3OGYzYmU4LnBuZyIsIndpZHRoIjoiPD05NjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.6ZG-vWBfjyv92fb4zQXe3nmHCeHcJCvjZPEAtsWz0gM") ;
 			height: 100vh;
 		}
 	</style>
@@ -63,16 +64,21 @@
 			// TODO 2 - Variable declarations 
 			var positionX = 0;
 			var points = 0;
-			
+			var speed = 10;
+
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
 			function update() {
-				positionX = positionX + 10
+				positionX = positionX + speed;
 				moveBoxTo(positionX);
-
+				if (positionX > boardWidth){
+					speed = -speed;
+				} else if(positionX < 0){
+					speed = speed * -1;
+				};
 			};
 
 			/* 
@@ -83,7 +89,14 @@
 			function handleBoxClick() {
 				positionX = 0;
 				points = points + 1;
+				speed = speed + 3;
 				changeBoxText(points);
+				if(speed > 0){
+					speed = speed + 3;
+				} else if(speed < 0){
+					speed = speed - 3;
+				};
+
 			};
 		})();
 	</script>
